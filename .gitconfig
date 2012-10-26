@@ -1,3 +1,34 @@
 [user]
 	name = Lucas Mbiwe
-	email = lucas@geek4good.com
+	email = lucas.mbiwe@wimdu.com
+[sendemail]
+	smtpserver = smtp.gmail.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = mvim -f
+	excludesfile = /Users/lucas/.gitignore_global
+[merge]
+	tool = threesome
+[mergetool "threesome"]
+  cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+  trustExitCode = true
+[push]
+	default = current
+[rerere]
+	enabled = 1
+[alias]
+  st = status -s
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[credential]
+	helper = osxkeychain
+[receive]
+	denyNonFastForwards = true
+	denyDeletes = true
