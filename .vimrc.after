@@ -2,10 +2,23 @@ colorscheme badwolf
 
 set autoread
 set nrformats=
+set clipboard=unnamed  " Use system clipboard
+set cursorline
+set colorcolumn=80
 
+" A couple of convenience mappings
+"map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
+"map <Enter> o<ESC>
+
+" Create a scratch (i.e. temporary) buffer
+map <Leader><TAB> :Scratch<CR>
+
+" Go to previous file
+map <Leader>p <C-^>
+
+" Convenience mappings that let me keep my fingers on the home row
 imap hh =>
-imap jj <esc>
-map <Leader>p <C-^> " Go to previous file
+imap jj <ESC>
 
 " Vertical and horizontal split then hop to a new buffer
 :noremap <Leader><Leader>v :vsp^M^W^W<CR>
@@ -71,3 +84,7 @@ else
 " Mouse support
     set mouse=a
 endif
+
+" threesome **************************************************************
+let g:threesome_initial_scrollbind_grid = 1
+let g:threesome_initial_layout_grid = 1
