@@ -11,6 +11,7 @@
 [core]
 	editor = mvim -f
 	excludesfile = /Users/lucas/.gitignore_global
+	pager = less -FRSX
 [merge]
 	tool = threesome
 [mergetool "threesome"]
